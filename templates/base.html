@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ask a Question</title>
+    <link rel="stylesheet" href="/static/css/style.css"></head>
+<body>
+    <div class="container">
+        <h1>Ask a Question</h1>
+        <form method="POST" action="/ask_business">
+            <label for="question">Your Question:</label>
+            <input type="text" id="question" name="question" placeholder="Enter your question" required>
+            <button type="submit">Ask</button>
+        </form>
+        <div id="answer">
+           
+                {{ response_text | safe }}
+        </div>
+        
+    </div>
+</body>
+</html>
